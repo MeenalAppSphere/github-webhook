@@ -13,6 +13,6 @@ export class AuthController {
     @GithubWebhookEvents(['login'])
     @UseGuards(GithubGuard)
     githubWebhook(@Body() payload: any) {
-        console.log('github acction preformed');
+        console.log('github action preformed');
     }
 }
