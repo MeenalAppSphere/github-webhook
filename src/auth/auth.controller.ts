@@ -9,8 +9,8 @@ import {
 @Controller('auth')
 export class AuthController {
 
-    @Get('login')
-    @GithubWebhookEvents(['login'])
+    @Post()
+    @GithubWebhookEvents(['push'])
     @UseGuards(GithubGuard)
     githubWebhook(@Body() payload: any) {
         console.log('github action preformed with webhook on port 80, data chnaged');
