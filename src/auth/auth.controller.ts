@@ -13,6 +13,6 @@ export class AuthController {
     @GithubWebhookEvents(['login'])
     @UseGuards(GithubGuard)
     githubWebhook(@Body() payload: any) {
-        console.log('github action preformed with webhook');
+        console.log('github action preformed with webhook on port 80');
     }
 }
