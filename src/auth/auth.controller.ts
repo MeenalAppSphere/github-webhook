@@ -9,7 +9,7 @@ import {
 @Controller('auth')
 export class AuthController {
 
-    @Post()
+    @Post('login')
     @GithubWebhookEvents(['login'])
     @UseGuards(GithubGuard)
     githubWebhook(@Body() payload: any) {
