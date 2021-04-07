@@ -1,5 +1,5 @@
 
-import { Controller, Post, Body, UseGuards } from '@nestjs/common';
+import { Controller, Post, Body, UseGuards, Get } from '@nestjs/common';
 import {
     GithubGuard,
     GithubWebhookEvents
@@ -9,7 +9,7 @@ import {
 @Controller('auth')
 export class AuthController {
 
-    @Post('login')
+    @Get('login')
     @GithubWebhookEvents(['login'])
     @UseGuards(GithubGuard)
     githubWebhook(@Body() payload: any) {

@@ -6,7 +6,7 @@ import { AuthController } from './auth/auth.controller';
 
 @Module({
   imports: [GithubWebhooksModule.forRoot({
-    webhookSecret: ''
+    webhookSecret: 'assignwork'
   })],
   controllers: [AppController, AuthController],
   providers: [AppService],
